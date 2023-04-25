@@ -1,0 +1,164 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,800,300);
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  line-height: 2;
+}
+
+header {
+  color: #FFFFFF;
+  background-color: #633628;
+  padding: 30px 0;
+  text-align: center;
+}
+header h1 {
+  font-size: 48px;
+  margin: 0 0 15px 0;
+}
+header h2 {
+  font-weight: 270;
+  font-size: 22px;
+  margin: 0 0 15px 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 900px;
+}
+
+.btn {
+  display: inline-block;
+  color: red;
+  font-weight: 400;
+  background: rgb(14, 56, 14);
+  border: 1px solid yellow;
+  border-radius: 18px; /*makes rounded corners*/
+  padding: 14px 18px;
+  cursor: pointer;
+}
+
+.btn:hover { /* mouse over the button changes bg colour*/
+  background: burlywood;
+  color: whitesmoke; /* mouse over button changes text colour*/
+}
+
+.submenu {
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  position: absolute;
+  background-color: pink;
+  min-width: 120px;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px 0px rgba(34, 28, 28, 0.753);
+  display: none; /* this style hides the submenu by default default*/
+}
+.submenu a {
+  color: red;
+  padding: 10px 12px;
+  text-decoration: none;
+  display: block;
+}
+.submenu a:hover {
+  background-color: #212d2e;
+}
+
+section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.features {
+  background: rgba(255, 255, 255, 0.4745098039);
+  color: #000000;
+}
+
+.feature {
+  width: 30%;
+  display: inline-block;
+}
+.feature i {
+  font-size: 5rem;
+}
+
+.quote {
+  background: #a08e54;
+  color: #FFFFFF;
+}
+
+footer {
+  background: #ad3838;
+  padding: 27px 0;
+  text-align: center;
+  color: #fadddd;
+  font-size: 14px;
+}
+footer ul {
+  list-style: none; /*To make the menu list horizontal and remove the bullets*/
+  margin: 0px;
+  padding: 0px;
+}
+footer ul li {
+  /* display: inline-block; this style makes the links inline-level element containers and so they are positioned next to each other horizontally by default.*/
+  /* the display: block style makes the list items block level elements so they take the entire width of their container. This makes the items align under each other*/
+  display: block;
+  margin: 3px;
+}
+footer ul li a {
+  padding: 7px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+footer ul li a:hover {
+  color: antiquewhite;
+}
+
+.container #copyrights {
+  margin: 3px;
+  color: #000000;
+}
+
+@media screen and (max-width: 576px) { /*changes the colour of the body tag and the mentioned screen size*/
+  body {
+    background-color: rgb(50, 195, 243);
+  }
+  .btn { /*changes the size of the download button on a small screen(576px and below)*/
+    display: block; /*takes the whole width of the container*/
+    font-size: 15px;
+  }
+  h1 {
+    font-size: 30px;
+    margin: 0px 0px 7px 0px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  section {
+    padding: 20px 0px 10px 0px;
+  }
+  .feature {
+    width: 100%;
+    /*set display property to flex which makes the div a flexbox container. 
+    This allows us to position the child features horizontally and also set the alignment of its child elements 
+    -- the icon and the text -- using the align-items and justify-content properties.
+    Now, the features will be aligned next to each other on larger screens and under each other on smaller screens.*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin: 0px 0px 10px 0px;
+    font-size: 14px;
+  }
+  .feature i {
+    width: 8%;
+    min-width: 120px;
+    margin-right: 18px;
+  }
+  .submenu {
+    position: relative;
+    width: 100%;
+  }
+}/*# sourceMappingURL=index.css.map */
