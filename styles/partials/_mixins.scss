@@ -1,0 +1,23 @@
+// Mixins
+@mixin button-style {
+  display: inline-block;
+  color: $text-red;
+  font-family: inherit;
+  font-weight: $btn-fw;
+  background: $bg-dark-limegreen;
+  border: 1px solid $border-yellow;
+  border-radius: 18px; /*makes rounded corners*/
+  padding: 14px 18px;
+  cursor: pointer;
+
+  &:hover { /* mouse over the button changes bg colour*/
+    background: $bg-burlywood;
+    color: $text-whitesmoke; /* mouse over button changes text colour*/
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

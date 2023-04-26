@@ -39,6 +39,7 @@ header h2 {
 header .btn {
   display: inline-block;
   color: #ff0000;
+  font-family: inherit;
   font-weight: 400;
   background: #0e380e;
   border: 1px solid #ffff00;
