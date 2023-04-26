@@ -1,14 +1,50 @@
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,800,300);
+
+// variables
+$font-family: 'Open Sans','Helvetica Neue',Helvetica, sans-serif;
+$text-black: #000000;
+$text-white: #FFFFFF;
+$text-whitesmoke: whitesmoke;
+$text-antiquewhite: antiquewhite;
+$text-red:#ff0000;
+$text-lightGrayishRed: #fadddd;
+$bg-desaturatedRed: #633628;
+$bg-darkLimeGreen: #0e380e;
+$bg-burlywood: #deb887;
+$bg-pink: #ffc0cb;
+$bg-cyanBlack: #212d2e;
+$bg-brightCyan: #32c3f3;
+$bg-darkYellow: #a08e54;
+$bg-darkred: #ad3838;
+$border-yellow: #ffff00;
+$bs-blackred: #221c1c;
+
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans','Helvetica Neue',Helvetica, sans-serif;
+    font-family: $font-family;
     line-height: 2;
 }
 
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 900px;
+
+  #copyrights {
+    margin: 3px;
+    color: $text-black;
+  }
+}
+
+section {
+padding: 50px 0;
+text-align: center;
+}
+
 header {
-  color: #FFFFFF;
-  background-color: #633628;
+  color: $text-white;
+  background-color: $bg-desaturatedRed;
   padding: 30px 0;
   text-align: center;
   h1 {
@@ -22,79 +58,71 @@ header {
     }
     margin: 0 0 15px 0;
   }
-}
 
-.container {
-    margin: 0 auto;
-    padding: 0 20px;
-    max-width: 900px;
-}
-.btn {
+  .btn {
     display: inline-block;
-    color: red;
+    color: $text-red;
     font-weight: 400;
-    background: rgb(14, 56, 14);
-    border: 1px solid yellow;
+    background: $bg-darkLimeGreen;
+    border: 1px solid $border-yellow;
     border-radius: 18px; /*makes rounded corners*/
     padding: 14px 18px;
     cursor: pointer;
-}
-
-.btn:hover { /* mouse over the button changes bg colour*/
-    background: burlywood;
-    color: whitesmoke; /* mouse over button changes text colour*/
-}
-
-.submenu {
-  left: 50%;
-  transform: translate(-50%, 0);
-  text-align:center;
-  position: absolute;
-  background-color: pink;
-  min-width: 120px;
-  border-radius: 5px;
-  box-shadow: 0px 8px 16px 0px rgba(34, 28, 28, 0.753);
-  display: none; /* this style hides the submenu by default default*/
-
-  a {
-    color: red;
-    padding: 10px 12px;
-    text-decoration: none;
-    display: block;
   }
 
-  a:hover {
-    background-color: #212d2e;
+  .btn:hover { /* mouse over the button changes bg colour*/
+    background: $bg-burlywood;
+    color: $text-whitesmoke; /* mouse over button changes text colour*/
+  }
+
+  .submenu {
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align:center;
+    position: absolute;
+    background-color: $bg-pink;
+    min-width: 120px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px $bs-blackred;
+    display: none; /* this style hides the submenu by default default*/
+  
+    a {
+      color: $text-red;
+      padding: 10px 12px;
+      text-decoration: none;
+      display: block;
+    }
+  
+    a:hover {
+      background-color: $bg-cyanBlack;
+    }
   }
 }
 
-section {
-  padding: 50px 0;
-  text-align: center;
-}
 .features {
   background: #ffffff79;
-  color: #000000;
-}
+  color: $text-black;
 
-.feature {
-  width: 30%;
-  display: inline-block;
-
-  i {
-    font-size: 5rem;
+  .feature {
+    width: 30%;
+    display: inline-block;
+  
+    i {
+      font-size: 5rem;
+    }
   }
 }
+
 .quote {
-  background:#a08e54;
-  color:#FFFFFF;
+  background: $bg-darkYellow;
+  color:$text-white;
 }
 
 footer {
-  background: #ad3838;
+  background: $bg-darkred;
   padding: 27px 0;
   text-align: center;
-  color: #fadddd;
+  color: $text-lightGrayishRed;
   font-size: 14px;
 
   ul {
@@ -111,26 +139,21 @@ footer {
       a {
         padding: 7px;
         text-decoration: none;
-        color: black;
+        color: $text-black;
         font-size: 14px;
       }
 
       a:hover {
-        color: antiquewhite;
+        color: $text-antiquewhite;
       }
     }
   }
 }
 
-.container #copyrights {
-  margin: 3px;
-  color: #000000;
-}
-
 
 @media screen and (max-width: 576px) { /*changes the colour of the body tag and the mentioned screen size*/ 
   body {
-    background-color: rgb(50, 195, 243);
+    background-color: $bg-brightCyan;
   }
   .btn { /*changes the size of the download button on a small screen(576px and below)*/
     display: block; /*takes the whole width of the container*/
