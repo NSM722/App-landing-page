@@ -112,7 +112,7 @@ footer ul li a {
   color: #000000;
   font-size: 14px;
 }
-footer ul li:hover {
+footer ul li a:hover {
   color: antiquewhite;
 }
 
