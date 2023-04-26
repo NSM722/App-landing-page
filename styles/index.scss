@@ -1,57 +1,6 @@
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,800,300);
-
-// Variables
-$font-family: 'Open Sans','Helvetica Neue',Helvetica, sans-serif;
-$text-black: #000000;
-$text-white: #FFFFFF;
-$text-whitesmoke: whitesmoke;
-$text-antiquewhite: antiquewhite;
-$text-red:#ff0000;
-$text-light-grayish-red: #fadddd;
-$bg-desaturated-red: #633628;
-$bg-dark-limegreen: #0e380e;
-$bg-burlywood: #deb887;
-$bg-pink: #ffc0cb;
-$bg-cyan-black: #212d2e;
-$bg-bright-cyan: #32c3f3;
-$bg-dark-yellow: #a08e54;
-$bg-darkred: #ad3838;
-$border-yellow: #ffff00;
-$bs-blackred: #221c1c;
-$feature-i-fs: 5rem;
-$footer-fs: 14px;
-$footer-a-fs: 14px;
-$feature-fs-small: 14px;
-$h1-fs: 48px;
-$h1-fs-small: 30px;
-$h2-fs: 22px;
-$h2-fs-small: 16px;
-$h2-fw: 270;
-$btn-fs-small: 15px;
-$btn-fw: 400;
-
-// Mixins
-@mixin button-style {
-  display: inline-block;
-  color: $text-red;
-  font-weight: $btn-fw;
-  background: $bg-dark-limegreen;
-  border: 1px solid $border-yellow;
-  border-radius: 18px; /*makes rounded corners*/
-  padding: 14px 18px;
-  cursor: pointer;
-
-  &:hover { /* mouse over the button changes bg colour*/
-    background: $bg-burlywood;
-    color: $text-whitesmoke; /* mouse over button changes text colour*/
-  }
-}
-
-@mixin flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+@import './partials/variables';
+@import './partials/mixins';
 
 // General Styling
 body {
@@ -73,8 +22,8 @@ body {
 }
 
 section {
-padding: 50px 0;
-text-align: center;
+  padding: 50px 0;
+  text-align: center;
 }
 
 header {
