@@ -79,11 +79,12 @@ header {
     border-radius: 18px; /*makes rounded corners*/
     padding: 14px 18px;
     cursor: pointer;
-  }
 
-  .btn:hover { /* mouse over the button changes bg colour*/
-    background: $bg-burlywood;
-    color: $text-whitesmoke; /* mouse over button changes text colour*/
+    &:hover { /* mouse over the button changes bg colour*/
+      background: $bg-burlywood;
+      color: $text-whitesmoke; /* mouse over button changes text colour*/
+    }
+  
   }
 
   .submenu {
@@ -102,10 +103,10 @@ header {
       padding: 10px 12px;
       text-decoration: none;
       display: block;
-    }
-  
-    a:hover {
-      background-color: $bg-cyanBlack;
+
+      &:hover {
+        background-color: $bg-cyanBlack;
+      }
     }
   }
 }
@@ -154,7 +155,7 @@ footer {
         font-size: $footer-a-fs;
       }
 
-      a:hover {
+      &:hover {
         color: $text-antiquewhite;
       }
     }

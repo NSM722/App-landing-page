@@ -6,6 +6,21 @@ body {
   line-height: 2;
 }
 
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 900px;
+}
+.container #copyrights {
+  margin: 3px;
+  color: #000000;
+}
+
+section {
+  padding: 50px 0;
+  text-align: center;
+}
+
 header {
   color: #FFFFFF;
   background-color: #633628;
@@ -21,65 +36,50 @@ header h2 {
   font-size: 22px;
   margin: 0 0 15px 0;
 }
-
-.container {
-  margin: 0 auto;
-  padding: 0 20px;
-  max-width: 900px;
-}
-
-.btn {
+header .btn {
   display: inline-block;
-  color: red;
+  color: #ff0000;
   font-weight: 400;
-  background: rgb(14, 56, 14);
-  border: 1px solid yellow;
+  background: #0e380e;
+  border: 1px solid #ffff00;
   border-radius: 18px; /*makes rounded corners*/
   padding: 14px 18px;
   cursor: pointer;
 }
-
-.btn:hover { /* mouse over the button changes bg colour*/
-  background: burlywood;
+header .btn:hover { /* mouse over the button changes bg colour*/
+  background: #deb887;
   color: whitesmoke; /* mouse over button changes text colour*/
 }
-
-.submenu {
+header .submenu {
   left: 50%;
   transform: translate(-50%, 0);
   text-align: center;
   position: absolute;
-  background-color: pink;
+  background-color: #ffc0cb;
   min-width: 120px;
   border-radius: 5px;
-  box-shadow: 0px 8px 16px 0px rgba(34, 28, 28, 0.753);
+  box-shadow: 0px 8px 16px 0px #221c1c;
   display: none; /* this style hides the submenu by default default*/
 }
-.submenu a {
-  color: red;
+header .submenu a {
+  color: #ff0000;
   padding: 10px 12px;
   text-decoration: none;
   display: block;
 }
-.submenu a:hover {
+header .submenu a:hover {
   background-color: #212d2e;
-}
-
-section {
-  padding: 50px 0;
-  text-align: center;
 }
 
 .features {
   background: rgba(255, 255, 255, 0.4745098039);
   color: #000000;
 }
-
-.feature {
+.features .feature {
   width: 30%;
   display: inline-block;
 }
-.feature i {
+.features .feature i {
   font-size: 5rem;
 }
 
@@ -109,21 +109,16 @@ footer ul li {
 footer ul li a {
   padding: 7px;
   text-decoration: none;
-  color: black;
+  color: #000000;
   font-size: 14px;
 }
-footer ul li a:hover {
+footer ul li:hover {
   color: antiquewhite;
-}
-
-.container #copyrights {
-  margin: 3px;
-  color: #000000;
 }
 
 @media screen and (max-width: 576px) { /*changes the colour of the body tag and the mentioned screen size*/
   body {
-    background-color: rgb(50, 195, 243);
+    background-color: #32c3f3;
   }
   .btn { /*changes the size of the download button on a small screen(576px and below)*/
     display: block; /*takes the whole width of the container*/
